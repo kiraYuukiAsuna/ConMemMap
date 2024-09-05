@@ -125,7 +125,7 @@ struct TupleHash {
 int main() {
 	PerformanceTestCollection tests;
 
-	for (int start = 0; start <= 1000000; start += 100000) {
+	for (int start = 100000; start <= 1000000; start += 100000) {
 		tests.tests.emplace_back(generateTest("ConMemMap", start, "Insert"));
 		tests.tests.emplace_back(generateTest("ConMemMap", start, "Find"));
 		tests.tests.emplace_back(generateTest("ConMemMap", start, "Erase"));
